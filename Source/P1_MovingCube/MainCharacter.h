@@ -29,7 +29,8 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	//ATriggerBox* TriggerBox;   ->>>>>>>> include dependinta
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
 	UInputMappingContext* CubeMappingContext;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)

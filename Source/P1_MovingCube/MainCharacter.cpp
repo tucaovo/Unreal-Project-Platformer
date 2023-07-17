@@ -7,6 +7,7 @@
 #include "InputActionValue.h"
 #include "Components/InputComponent.h"
 #include "EnhancedInputComponent.h"
+#include "Engine/TriggerBox.h"
 #include "EnhancedInputSubsystems.h"
 
 // Sets default values
@@ -35,9 +36,6 @@ void AMainCharacter::BeginPlay()
 void AMainCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	/*if () {
-		Reset
-	}*/// here I'll implement an end game case 
 
 }
 
