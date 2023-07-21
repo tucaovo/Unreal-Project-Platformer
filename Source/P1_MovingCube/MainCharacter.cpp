@@ -48,6 +48,7 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 		EnhancedInputComponent->BindAction(MoveRightAction, ETriggerEvent::Triggered, this, &AMainCharacter::MoveRight);
 		EnhancedInputComponent->BindAction(YawRotation, ETriggerEvent::Triggered, this, &AMainCharacter::RotateYaw);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Ongoing, this, &AMainCharacter::Jump);
+		EnhancedInputComponent->BindAction(PitchRotation, ETriggerEvent::Triggered, this, &AMainCharacter::RotatePitch);
 	}
 }
 
@@ -72,5 +73,12 @@ void AMainCharacter::RotateYaw(const FInputActionValue& Value) {
 	const float Rotation = Value.Get<float>();
 	if(Rotation && Controller){ 
 		AddControllerYawInput(Rotation);
+	}
+}
+void AMainCharacter::RotatePitch(const FInputActionValue& Value) {
+	const float Rotation = Value.Get<float>();
+	if (Rotation)
+	{
+		AddControllerPitchInput(Rotation);
 	}
 }

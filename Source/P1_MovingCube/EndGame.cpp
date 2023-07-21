@@ -12,6 +12,5 @@ void AEndGame::BeginPlay() {
 }
 
 void AEndGame::Event(class AActor* overlappedActor, AActor* OtherActor) {
-	UE_LOG(LogTemp, Warning, TEXT("woaa"));
 	OtherActor->SetActorLocation(PlayerStart->GetActorLocation());
 }

@@ -40,9 +40,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
 	UInputAction* YawRotation;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input)
-		UInputAction* JumpAction;
+	UInputAction* JumpAction;
+	UPROPERTY(EditAnywhere, Category = Input)
+	UInputAction* PitchRotation;
 	void RotateYaw(const FInputActionValue& Value);
 	void MoveForward(const FInputActionValue& Value);
 	void MoveRight(const FInputActionValue& Value);
+	void RotatePitch(const FInputActionValue& Value);
 	APlayerController* PlayerController;
 };
